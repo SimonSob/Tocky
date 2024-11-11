@@ -12,28 +12,27 @@ if ('serviceWorker' in navigator) {
 
 function getRandomZnak(zasobnik_znaku)
 {
-    const num = Math.random() * (zasobnik_znaku.lenght-1);
+    const num = Math.floor(Math.random() * (zasobnik_znaku.lenght-1 ));
     return(zasobnik_znaku[num]);
 }
 
+
 function Roztoc()
 {
-    let zasobnik_znaku=["⭐","🍀","🌈","🌸"]
+    let zasobnik_znaku = ["⭐","🍀","🌈","🌸"];
     const refresh_rate1 = 100;
     const refresh_rate2 = 200;
     const refresh_rate3 = 300;
 
-    for(let i=0;i<20000;i++)
+    for(let i=0; i<20000; i++)
     {
         if(i % refresh_rate1 == 0)
         {
-            console.log(getRandomZnak(zasobnik_znaku));
             document.getElementById("first").textContent = getRandomZnak(zasobnik_znaku);
         }
 
         if(i % refresh_rate2 == 0)
-        {
-            
+        { 
             document.getElementById("second").textContent = getRandomZnak(zasobnik_znaku);
         }
 
@@ -44,6 +43,9 @@ function Roztoc()
         }
     }
 
-    document.getElementById("first").textContent;  
+    const first = getElementById("first").textContent;
+    const second = getElementById("second").textContent;
+    const third = getElementById("third").textContent;
+
 
 }
