@@ -46,14 +46,22 @@ function Roztoc()
         
     }
 
-    const first = getElementById("first").textContent;
-    const second = getElementById("second").textContent;
-    const third = getElementById("third").textContent;
+    console.log('vubec nefakci');
 
-    if (first === second && second === third) {
-        document.getElementById("vyhra").textContent = "Vyhra: Vyhral";
-    } else {
-        document.getElementById("vyhra").textContent = "Vyhra: Nevyhral";
+    const first = document.getElementById("first").textContent;
+    const second = document.getElementById("second").textContent;
+    const third = document.getElementById("third").textContent;
+
+    console.log('nefunguje');
+
+    if(first == second && second == third)
+    {
+        document.getElementById("vyhra").textContent = 'vyhráváš';
+    }
+    else
+    {
+        console.log('toto funguje');
+        document.getElementById("vyhra").textContent = 'nevyhráváš';
     }
 
 }
