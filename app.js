@@ -16,7 +16,7 @@ function getRandomZnak(zasobnik_znaku)
     return zasobnik_znaku[num];
 }
 
-
+var vyher = 0;
 function Roztoc()
 {
     let zasobnik_znaku = ["⭐","🍀","🌈","🌸","🍎"];
@@ -24,7 +24,6 @@ function Roztoc()
     const refresh_rate2 = 200;
     const refresh_rate3 = 300;
 
-    console.log('neco tu napisu');
 
     for(let i=0; i<20000; i++)
     {
@@ -46,17 +45,17 @@ function Roztoc()
         
     }
 
-    console.log('vubec nefakci');
 
     const first = document.getElementById("first").textContent;
     const second = document.getElementById("second").textContent;
     const third = document.getElementById("third").textContent;
 
-    console.log('nefunguje');
-
     if(first == second && second == third)
     {
         document.getElementById("vyhra").textContent = 'vyhráváš';
+        vyher = vyher + 1;
+        document.getElementById("pocet").textContent = 'výher:  ' + vyher;
+
     }
     else
     {

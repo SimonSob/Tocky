@@ -54,3 +54,10 @@ input, button {
     margin: 10px auto;
     padding: 10px;
 }
+
+#pocet
+{
+    color: gold;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
