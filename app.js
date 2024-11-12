@@ -12,8 +12,8 @@ if ('serviceWorker' in navigator) {
 
 function getRandomZnak(zasobnik_znaku)
 {
-    const num = Math.floor(Math.random() * (zasobnik_znaku.lenght-1 ));
-    return(zasobnik_znaku[num]);
+    const num = Math.floor(Math.random() * (zasobnik_znaku.lenght));
+    return zasobnik_znaku[num];
 }
 
 
@@ -23,6 +23,8 @@ function Roztoc()
     const refresh_rate1 = 100;
     const refresh_rate2 = 200;
     const refresh_rate3 = 300;
+
+    console.log('neco tu napisu');
 
     for(let i=0; i<20000; i++)
     {
@@ -47,5 +49,10 @@ function Roztoc()
     const second = getElementById("second").textContent;
     const third = getElementById("third").textContent;
 
+    if (first === second && second === third) {
+        document.getElementById("vyhra").textContent = "Vyhra: Vyhral";
+    } else {
+        document.getElementById("vyhra").textContent = "Vyhra: Nevyhral";
+    }
 
 }
