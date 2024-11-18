@@ -10,6 +10,11 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+function zmen()
+{
+    
+}
+
 function getRandomZnak(zasobnik_znaku)
 {
     const num = Math.floor(Math.random() * (zasobnik_znaku.length));
