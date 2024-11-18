@@ -49,10 +49,13 @@ function Roztoc()
     const first = document.getElementById("first").textContent;
     const second = document.getElementById("second").textContent;
     const third = document.getElementById("third").textContent;
+    const sazka = document.getElementById("sazka").value;
 
     if(first == second && second == third)
     {
-        document.getElementById("vyhra").textContent = 'vyhráváš';
+        const vyhra = 1/Math.pow((1/zasobnik_znaku.length),3) * 0.75;
+        /*document.getElementById("vyhra").textContent = vyhra;*/
+        document.getElementById("vyhra").textContent = 'vyhráváš '+ vyhra;
         vyher = vyher + 1;
         document.getElementById("pocet").textContent = 'výher:  ' + vyher;
 

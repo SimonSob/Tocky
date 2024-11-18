@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <div id="weather">
+    <div id="weather" class="pageone">
         <h1>Točky</h1>
         <div id="kotouce">
             <div id="first">⭐</div>
@@ -22,11 +22,25 @@
         <form >
             <button type="button" onclick="Roztoc()" >Roztoč</button>
         </form>
+
+        <form>
+            <label>davaj mony</label>
+            <input type="number" name="sazka" id="sazka" value="1">
+        </form>
         
         <div id="vyhra">hraj</div>
         <div id="pocet"></div>   
 
     </div>
+
+    <div id="weather" class="pagetwo">
+
+        <label for="">strana2</label>
+
+    </div>
+
+    <button type="button" onclick="zmen1()">tocka</button>
+    <button type="button" onclick="zmen2()">nastaveni</button>
 
 </body>
 </html>
